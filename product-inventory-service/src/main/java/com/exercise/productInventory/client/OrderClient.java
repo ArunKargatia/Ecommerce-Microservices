@@ -1,13 +1,12 @@
 package com.exercise.productInventory.client;
 
-import java.util.List;
-
+import com.exercise.productInventory.dto.OrderDetailDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.exercise.productInventory.dto.OrderDetailDTO;
+import java.util.List;
 
-@FeignClient(name = "order-management-service", url = "http://localhost:8082")
+@FeignClient(name = "order-management-service")
 public interface OrderClient {
 	
 	@GetMapping("/api/orders/order-details/all")

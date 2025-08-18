@@ -1,14 +1,13 @@
 package com.exercise.orderManagement.client;
 
-import java.util.List;
-
+import com.exercise.orderManagement.dto.CustomerDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.exercise.orderManagement.dto.CustomerDTO;
+import java.util.List;
 
-@FeignClient(name = "user-service", url = "http://localhost:8083")
+@FeignClient(name = "user-service")
 public interface CustomerClient {
 	
 	@GetMapping("/api/customer/profile")
