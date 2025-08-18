@@ -1,11 +1,5 @@
 package com.exercise.userManagement.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import com.exercise.userManagement.config.jwt.JwtUtil;
 import com.exercise.userManagement.dto.LoginDTO;
 import com.exercise.userManagement.dto.LoginResponseDTO;
@@ -13,6 +7,11 @@ import com.exercise.userManagement.dto.RegisterDTO;
 import com.exercise.userManagement.entity.Customer;
 import com.exercise.userManagement.repository.CustomerRepository;
 import com.exercise.userManagement.service.AuthService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class AuthServiceImpl implements AuthService{

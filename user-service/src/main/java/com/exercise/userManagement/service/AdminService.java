@@ -1,8 +1,8 @@
 package com.exercise.userManagement.service;
 
-import java.util.List;
-
 import com.exercise.userManagement.dto.CustomerDTO;
+
+import java.util.List;
 
 public interface AdminService {
 

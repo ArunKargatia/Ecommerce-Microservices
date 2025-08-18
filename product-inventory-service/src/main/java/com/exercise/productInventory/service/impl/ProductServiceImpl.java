@@ -1,13 +1,5 @@
 package com.exercise.productInventory.service.impl;
 
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import com.exercise.productInventory.dto.ProductDTO;
 import com.exercise.productInventory.entity.Category;
 import com.exercise.productInventory.entity.Product;
@@ -17,6 +9,13 @@ import com.exercise.productInventory.repository.CategoryRepository;
 import com.exercise.productInventory.repository.ProductRepository;
 import com.exercise.productInventory.repository.SupplierRepository;
 import com.exercise.productInventory.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService{

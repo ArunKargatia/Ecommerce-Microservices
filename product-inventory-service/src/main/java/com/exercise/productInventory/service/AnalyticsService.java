@@ -1,10 +1,10 @@
 package com.exercise.productInventory.service;
 
-import java.util.List;
-
 import com.exercise.productInventory.dto.CategoryRevenueDTO;
 import com.exercise.productInventory.dto.ProductDTO;
 import com.exercise.productInventory.dto.SupplierStockDTO;
+
+import java.util.List;
 
 public interface AnalyticsService {
 	

@@ -1,12 +1,12 @@
 package com.exercise.orderManagement.service;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import com.exercise.orderManagement.dto.CustomerDTO;
 import com.exercise.orderManagement.dto.CustomerOrderCountDTO;
 import com.exercise.orderManagement.dto.CustomerOrderValueDTO;
 import com.exercise.orderManagement.dto.OrderDTO;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 public interface AnalyticsService {
 	

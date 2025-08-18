@@ -1,8 +1,8 @@
 package com.exercise.productInventory.service;
 
-import java.util.List;
-
 import com.exercise.productInventory.dto.CategoryDTO;
+
+import java.util.List;
 
 public interface CategoryService {
 	

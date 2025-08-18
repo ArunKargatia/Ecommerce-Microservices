@@ -1,17 +1,5 @@
 package com.exercise.orderManagement.service.impl;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import com.exercise.orderManagement.client.CustomerClient;
 import com.exercise.orderManagement.dto.CustomerDTO;
 import com.exercise.orderManagement.dto.CustomerOrderCountDTO;
@@ -21,6 +9,17 @@ import com.exercise.orderManagement.entity.Order;
 import com.exercise.orderManagement.mapper.OrderMapper;
 import com.exercise.orderManagement.repository.OrderRepository;
 import com.exercise.orderManagement.service.AnalyticsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class AnalyticsServiceImpl implements AnalyticsService{

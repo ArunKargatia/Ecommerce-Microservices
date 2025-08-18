@@ -1,14 +1,5 @@
 package com.exercise.orderManagement.service.impl;
 
-import java.math.BigDecimal;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import com.exercise.orderManagement.client.CustomerClient;
 import com.exercise.orderManagement.client.ProductClient;
 import com.exercise.orderManagement.dto.CustomerDTO;
@@ -21,8 +12,15 @@ import com.exercise.orderManagement.mapper.OrderMapper;
 import com.exercise.orderManagement.repository.OrderDetailRepository;
 import com.exercise.orderManagement.repository.OrderRepository;
 import com.exercise.orderManagement.service.OrderService;
-
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class OrderServiceImpl implements OrderService {

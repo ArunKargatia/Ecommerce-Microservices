@@ -1,21 +1,16 @@
 package com.exercise.orderManagement.controller;
 
-import java.math.BigDecimal;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.exercise.orderManagement.dto.CustomerDTO;
 import com.exercise.orderManagement.dto.CustomerOrderCountDTO;
 import com.exercise.orderManagement.dto.CustomerOrderValueDTO;
 import com.exercise.orderManagement.dto.OrderDTO;
 import com.exercise.orderManagement.service.AnalyticsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/analytics")
