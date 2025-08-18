@@ -1,0 +1,1345 @@
+{
+	"info": {
+		"_postman_id": "e66f6bb4-9371-4ab5-bc3a-7b3029c8fa9b",
+		"name": "Ecommerce-Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37196750"
+	},
+	"item": [
+		{
+			"name": "Order service apis",
+			"item": [
+				{
+					"name": "Order apis",
+					"item": [
+						{
+							"name": "get all orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTE5NDIsImV4cCI6MTc1NDk0Nzk0Mn0.CiUsmVzFz40MvPHHRDAVY61eKl2tO1s7v7L1FVXWVcU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/orders/all",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all order details",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTE5NDIsImV4cCI6MTc1NDk0Nzk0Mn0.CiUsmVzFz40MvPHHRDAVY61eKl2tO1s7v7L1FVXWVcU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/orders/order-details/all",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"order-details",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTE5NDIsImV4cCI6MTc1NDk0Nzk0Mn0.CiUsmVzFz40MvPHHRDAVY61eKl2tO1s7v7L1FVXWVcU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderDate\" : \"2025-08-11\",\r\n    \"orderDetails\" : [\r\n        {\r\n            \"productId\" : 1,\r\n            \"quantity\" : 1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8082}}/api/orders",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get order by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2azE4QGdtYWlsLmNvbSIsImN1c3RvbWVySWQiOjQsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzU0OTA5NzA4LCJleHAiOjE3NTQ5NDU3MDh9.7Pi5W1CimzcQiLp8f4-Z_ffY70vOWfCumafqg8C61C8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/orders/1",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MDk4NTUsImV4cCI6MTc1NDk0NTg1NX0.JJif5qCveVT4jfYlWsPPpiMuCpwnGEzzZsz7yFYutb0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8082}}/api/orders/2/cancel",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										"2",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Analytical apis",
+					"item": [
+						{
+							"name": "get recent customers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTU1MDYxMDUsImV4cCI6MTc1NTU0MjEwNX0.OeOM9wo6JwM1MDmSiMQgC0h1NRZ1JFd0T14S1U1jnQ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/recent-customers?days=100",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"recent-customers"
+									],
+									"query": [
+										{
+											"key": "days",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get customers with no orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTU1MDYxMDUsImV4cCI6MTc1NTU0MjEwNX0.OeOM9wo6JwM1MDmSiMQgC0h1NRZ1JFd0T14S1U1jnQ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/customers/no-orders",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"customers",
+										"no-orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get customer's order count",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/customer/1",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"customer",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get orders above",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/order/above?value=100",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"order",
+										"above"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get customers by product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/product/customer/2",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"product",
+										"customer",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get average order value of customer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/customer/average/1",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"customer",
+										"average",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get frequent customers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8082}}/api/analytics/frequent-customers?months=1&minOrderCount=1",
+									"host": [
+										"{{8082}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"frequent-customers"
+									],
+									"query": [
+										{
+											"key": "months",
+											"value": "1"
+										},
+										{
+											"key": "minOrderCount",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get top expensive products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/analytics/products/top?n=3",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"products",
+										"top"
+									],
+									"query": [
+										{
+											"key": "n",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get total revenue of category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/analytics/category/1",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"category",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get total stock of supplier",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTM3NTgsImV4cCI6MTc1NDk0OTc1OH0.Ig3ZtnCe5xsSJQs2pJldq_P_8GlxzRVBvbC5udzdvPc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/analytics/supplier/stock/3",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"analytics",
+										"supplier",
+										"stock",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product service apis",
+			"item": [
+				{
+					"name": "supplier apis",
+					"item": [
+						{
+							"name": "get all suppliers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTAwMDMsImV4cCI6MTc1NDk0NjAwM30.-ro_E41Yx0_Kh9DPRcOntl0aQOedAS8C36rEY1HM3ak",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/suppliers/all",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"suppliers",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get supplier by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTAwMDMsImV4cCI6MTc1NDk0NjAwM30.-ro_E41Yx0_Kh9DPRcOntl0aQOedAS8C36rEY1HM3ak",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/suppliers/2",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"suppliers",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete supplier",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTA5NDksImV4cCI6MTc1NDk0Njk0OX0.t-ZDEMuyfxlPffwBhaKGA9qaNVjYdejFyTHbw59KDbo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/suppliers/4",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"suppliers",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add supplier",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTA5NDksImV4cCI6MTc1NDk0Njk0OX0.t-ZDEMuyfxlPffwBhaKGA9qaNVjYdejFyTHbw59KDbo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"supplierName\" : \"Tech giant suppliers\",\r\n    \"contact\" : \"tgs@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/suppliers",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"suppliers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update supplier",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTA5NDksImV4cCI6MTc1NDk0Njk0OX0.t-ZDEMuyfxlPffwBhaKGA9qaNVjYdejFyTHbw59KDbo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"supplierName\" : \"Daily Harvest Co.\",\r\n    \"contact\" : \"8888888888\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/suppliers/2",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"suppliers",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category apis",
+					"item": [
+						{
+							"name": "get all categories",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTA5NDksImV4cCI6MTc1NDk0Njk0OX0.t-ZDEMuyfxlPffwBhaKGA9qaNVjYdejFyTHbw59KDbo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/categories/all",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get category by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTA5NDksImV4cCI6MTc1NDk0Njk0OX0.t-ZDEMuyfxlPffwBhaKGA9qaNVjYdejFyTHbw59KDbo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/categories/2",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/categories/10",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add category",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"categoryName\": \"Gaming 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/categories",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update category",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n    \"categoryName\": \"Gaming gadgets\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/categories/6",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"categories",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product apis",
+					"item": [
+						{
+							"name": "get all products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2azE4QGdtYWlsLmNvbSIsImN1c3RvbWVySWQiOjQsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzU0OTExNDU1LCJleHAiOjE3NTQ5NDc0NTV9.QTbuc5IKTZCpoTlPePjPZqWrgPacvsZrZQBIJPbPULY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/products/all",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get product by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTE2NzEsImV4cCI6MTc1NDk0NzY3MX0.VGk4ycdo1_crWLlHt_a2jJrpiC6J4xZBZKwFFs6ebUE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/products/1",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2azE4QGdtYWlsLmNvbSIsImN1c3RvbWVySWQiOjQsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzU0OTExNDU1LCJleHAiOjE3NTQ5NDc0NTV9.QTbuc5IKTZCpoTlPePjPZqWrgPacvsZrZQBIJPbPULY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{8081}}/api/products/6",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"productName\": \"Play station 5\",\r\n        \"unitPrice\": 699,\r\n        \"unitsInStock\": 10,\r\n        \"categoryId\": 1,\r\n        \"supplierId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/products",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"productName\": \"Sony Play station 5 pro\",\r\n        \"unitPrice\": 699,\r\n        \"unitsInStock\": 10,\r\n        \"categoryId\": 1,\r\n        \"supplierId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/products/14",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "increase product stock",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"productName\": \"Sony Play station 5 pro\",\r\n        \"unitPrice\": 699,\r\n        \"unitsInStock\": 10,\r\n        \"categoryId\": 1,\r\n        \"supplierId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/products/1/stock/increase?quantity=10",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"1",
+										"stock",
+										"increase"
+									],
+									"query": [
+										{
+											"key": "quantity",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "decrease product stock",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"productName\": \"Sony Play station 5 pro\",\r\n        \"unitPrice\": 699,\r\n        \"unitsInStock\": 10,\r\n        \"categoryId\": 1,\r\n        \"supplierId\": 1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8081}}/api/products/1/stock/decrease?quantity=10",
+									"host": [
+										"{{8081}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"1",
+										"stock",
+										"decrease"
+									],
+									"query": [
+										{
+											"key": "quantity",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User service",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register customer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Virat Kohli\",\r\n    \"email\" : \"vk18@gmail.com\",\r\n    \"password\" : \"vk@181818\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8083}}/api/auth/register",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"arunkargatia47@gmail.com\",\r\n    \"password\" : \"ak@135841\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8083}}/api/auth/login",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "get all customers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTU1MDYxMDUsImV4cCI6MTc1NTU0MjEwNX0.OeOM9wo6JwM1MDmSiMQgC0h1NRZ1JFd0T14S1U1jnQ8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8083}}/api/admin/customers/all",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"customers",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get customer by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ4OTk5NDIsImV4cCI6MTc1NDkzNTk0Mn0.n1Br3ndP7g35wVctKb-1r3Jm7Viuol4odrF018J_KW8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8083}}/api/admin/customer/1",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"customer",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete customer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ4OTgxOTQsImV4cCI6MTc1NDkzNDE5NH0.TwrWTL-frNrfH-1BsEAMlAQeeWw1wyP3BEKbMuNdkwk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{8083}}/api/admin/customer/2",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"customer",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user role",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ4OTgxOTQsImV4cCI6MTc1NDkzNDE5NH0.TwrWTL-frNrfH-1BsEAMlAQeeWw1wyP3BEKbMuNdkwk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{8083}}/api/admin/customer/2/role?newRole=ADMIN",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"customer",
+										"2",
+										"role"
+									],
+									"query": [
+										{
+											"key": "newRole",
+											"value": "ADMIN"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "get my profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ4OTk5NDIsImV4cCI6MTc1NDkzNTk0Mn0.n1Br3ndP7g35wVctKb-1r3Jm7Viuol4odrF018J_KW8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{8083}}/api/customer/profile",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"customer",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ4OTk5NDIsImV4cCI6MTc1NDkzNTk0Mn0.n1Br3ndP7g35wVctKb-1r3Jm7Viuol4odrF018J_KW8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldPassword\" : \"ak@123456\",\r\n    \"newPassword\" :\"ak@135841\",\r\n    \"confirmPassword\" : \"ak@135841\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{8083}}/api/customer/password",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"customer",
+										"password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete my account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2azE4QGdtYWlsLmNvbSIsImN1c3RvbWVySWQiOjMsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzU0ODk5MTU5LCJleHAiOjE3NTQ5MzUxNTl9.ZnRsBq6fDFN8TmlHqyOjASB_8D0w7BDTstKC47e6E9I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{8083}}/api/customer/delete",
+									"host": [
+										"{{8083}}"
+									],
+									"path": [
+										"api",
+										"customer",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
