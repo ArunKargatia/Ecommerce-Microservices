@@ -20,7 +20,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ5MTE5NDIsImV4cCI6MTc1NDk0Nzk0Mn0.CiUsmVzFz40MvPHHRDAVY61eKl2tO1s7v7L1FVXWVcU",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTU1ODc2OTgsImV4cCI6MTc1NTYyMzY5OH0.2_h-YEgmwCzSznBqkPNogks0ievCuOdPEgkzODaUC7I",
 											"type": "string"
 										}
 									]
@@ -1147,7 +1147,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTQ4OTk5NDIsImV4cCI6MTc1NDkzNTk0Mn0.n1Br3ndP7g35wVctKb-1r3Jm7Viuol4odrF018J_KW8",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVua2FyZ2F0aWE0N0BnbWFpbC5jb20iLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NTU1MTI2MDAsImV4cCI6MTc1NTU0ODYwMH0.ApFcmcdXD49I-Id_HI1QWUw4GwtxLB1wZy84Z9oUvBY",
 											"type": "string"
 										}
 									]
@@ -1338,6 +1338,41 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Api gateway",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"arunkargatia47@gmail.com\",\r\n    \"password\" : \"ak@135841\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/user-service/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user-service",
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
